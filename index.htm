@@ -206,22 +206,23 @@
         </section>
 
         <section class="band" id="planejamento">
-            <div class("wrap"): < div="section-head">
-                < div>
-                    < p="eyebrow"> Controle </ p>
-                    < h2> Planeje o gasto do rolê </ h2>
-                </ div>
-                < p="muted"> Calcule transporte, lanche e reserva. </ p>
-                </ div>
-                < div="panel">
-                    < div="toolbar">
-                        < input="field" id="transport" type="number" min="0" step="0.01" placeholder="Transporte">
-                            < input="field" id="food" type="number" min="0" step="0.01" placeholder="Lanche">
-                                < input="field" id="extra" type="number" min="0" step="0.01" placeholder="Reserva">
-                                    < button="btn primary" id="savePlan"> Salvar </ button>
-                                </ div>
-                                < div="calc-grid">
-                                    < div="panel metric">
+            <div class="wrap">
+                <div class="section-head">
+                    <div>
+                        <p class="eyebrow">Controle</p>
+                        <h2>Planeje o gasto do rolê</h2>
+                    </div>
+                    <p class="muted">Calcule transporte, lanche e reserva.</p>
+                </div>
+                <div class="panel">
+                    <div class="toolbar">
+                        <input class="field" id="transport" type="number" min="0" step="0.01" placeholder="Transporte">
+                        <input class="field" id="food" type="number" min="0" step="0.01" placeholder="Lanche">
+                        <input class="field" id="extra" type="number" min="0" step="0.01" placeholder="Reserva">
+                        <button class="btn primary" id="savePlan">Salvar</button>
+                    </div>
+                    <div class="calc-grid">
+                        <div class="panel metric">
                                         < span="muted"> Transporte </ span>
                                         < strong id="mTransport"> R$ 0,00 </ strong>
                                     </ div>
