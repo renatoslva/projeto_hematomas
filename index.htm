@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HEMATOMAS | Skate, música, cultura, tempo e bolsa</title>
+    <link rel="stylesheet" href="style.css">
+
+
+<body>
+    <header class="topbar">
+        <div class="wrap">
+            <nav class="nav" id="nav"><a class="brand" href="#inicio">
+                    <span class="mark">HM</span><span>HEMATOMAS</span></a><button class="menu" id="menu">Menu</button>
+                <div class="links"><a href="#pistas">Pistas SP</a><a href="#tempo">Tempo</a><a href="#bolsa">Bolsa</a>
+                    <a href="#musica">Música</a><a href="#cultura">Cultura</a><a href="#planejamento">Rolê</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="inicio">
+        <div class="skate-orbit"></div>
+        <div class="wrap hero-grid">
+            <div>
+                <p class="eyebrow">Skate // música // cultura // dados do dia</p>
+                <h1>HEMATOMAS</h1>
+                <p>App urbano para encontrar pistas de skate em São Paulo, acompanhar o tempo antes do rolê,
+                    ver música e cultura, consultar a bolsa de valores e planejar gastos.</p>
+                <div class="actions">
+                    <a class="btn primary" href="#pistas">Ver pistas</a><a class="btn secondary" href="#tempo">
+                        Checar tempo</a>
+                </div>
+            </div>
+            <aside class="hero-card">
+                <div class="clock" id="clock">--:--</div>
+                <p class="muted" id="dateText">Carregando horário...</p>
+                <div class="pill-row">
+                    <span class="pill">São Paulo</span><span class="pill">Skate spots</span>
+                    <span class="pill">Tempo ao vivo</span><span class="pill">Bolsa BR</span>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <main>
+        <section id="pistas">
+            <div class="wrap">
+                <div class="section-head">
+                    <div>
+                        <p class="eyebrow">
+                            Mapa rápido</p>
+                        <h2>Pistas de skate em São Paulo</h2>
+                    </div>
+                    <p class="muted">Lista inicial com
+                        locais conhecidos. Antes de sair, confirme horário e condição da pista.</p>
+                </div>
+                <div class="filters"><button class="chip" data-zone="todos" aria-pressed="true">
+                        Todas</button><button class="chip" data-zone="centro">Centro/Oeste</button>
+                    <button class="chip" data-zone="norte">Norte</button>
+                    <button class="chip" data-zone="sul">Sul</button>
+                    <input class="field wide" id="spotSearch" placeholder="Buscar pista">
+                </div>
+                <div class="spots" id="spotsGrid">
+
+                    <article class="spot" data-zone="centro oeste">
+                        <div class="spot-top">
+                            <h3>Centro de Esportes Radicais</h3><span class="level">completo</span>
+                        </div>
+                        <p>Bom Retiro. Pumptrack, street, bowl e mini ramp.</p>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Centro+de+Esportes+Radicais+São+Paulo">
+                            Abrir no mapa</a>
+                    </article>
+                    <article class="spot" data-zone="centro oeste">
+                        <div class="spot-top">
+                            <h3>Parque Zilda Natel</h3>
+                            <span class="level">clássica</span>
+                        </div>
+                        <p>Sumaré/Perdizes. Bowl, half-pipe e street.</p>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Parque+Zilda+Natel+São+Paulo">
+                            Abrir no mapa</a>
+                    </article>
+                    <article class="spot" data-zone="oeste">
+                        <div class="spot-top">
+                            <h3>Parque Cândido Portinari</h3>
+                            <span class="level">park</span>
+                        </div>
+                        <p>Zona Oeste. Skatepark de concreto perto do Villa-Lobos.</p>
+                        <a
+                            href="https://www.google.com/maps/search/?api=1&query=Parque+Cândido+Portinari+skatepark+São+Paulo">
+                            Abrir no mapa</a>
+                    </article>
+                    <article class="spot" data-zone="sul">
+                        <div class="spot-top">
+                            <h3>Marquise do Ibirapuera</h3><span class="level">urbano</span>
+                        </div>
+                        <p>Zona Sul. Ponto urbano para skate, cultura e música.</p><a
+                            href="https://www.google.com/maps/search/?api=1&query=Marquise+do+Ibirapuera+skate+São+Paulo">Abrir
+                            no mapa</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="band" id="tempo">
+            <div class="wrap">
+                <div class="section-head">
+                    <div>
+                        <p class="eyebrow">Antes do rolê</p>
+                        <h2>Previsão do tempo</h2>
+                    </div>
+                    <p class="muted">Busca por cidade usando Open-Meteo.</p>
+                </div>
+                <div class="panel">
+                    <div class="toolbar"><input class="field wide" id="cityInput" value="São Paulo"><button
+                            class="btn cyan" id="weatherBtn">Atualizar tempo</button></div>
+                    <h3 id="weatherPlace">São Paulo</h3>
+                    <p id="weatherNow" class="muted">Carregando...</p>
+                    <div class="weather-grid" id="weatherGrid"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="bolsa">
+            <div class="wrap">
+                <div class="section-head">
+                    <div>
+                        <p class="eyebrow">Mercado</p>
+                        <h2>Bolsa de valores</h2>
+                    </div>
+                    <p class="muted">Consulta ações brasileiras. Não é recomendação financeira.</p>
+                </div>
+                <div class="panel">
+                    <div class="toolbar"><input class="field wide" id="stockInput"
+                            value="PETR4,VALE3,ITUB4,WEGE3"><button class="btn green" id="stockBtn">Ver
+                            cotações</button></div>
+                    <div class="notice" id="bestStock">A melhor pontuação educativa aparecerá aqui.</div>
+                    <div class="stock-grid" id="stockGrid"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="band" id="musica">
+            <div class="wrap">
+                <div class="section-head">
+                    <div>
+                        <p class="eyebrow">Som do rolê</p>
+                        <h2>Músicas e cultura de rua</h2>
+                    </div>
+                    <p class="muted">Rap, trap, funk, rock, eletrônica, batalha de rima, grafite e eventos culturais.
+                    </p>
+                </div>
+                <div class="playlist">
+                    <article class="panel">
+                        <h3>Playlist urbana</h3>
+                        <div class="track">
+                            <div class="disc">01</div>
+                            <div><strong>Rap nacional</strong>
+                                <p class="muted">Base para sessão de street.</p>
+                            </div>
+                        </div>
+                        <div class="track">
+                            <div class="disc">02</div>
+                            <div><strong>Trap e drill</strong>
+                                <p class="muted">Batidas fortes para treinos.</p>
+                            </div>
+                        </div>
+                        <div class="equalizer"><span class="bar"></span><span class="bar"></span><span
+                                class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+                    </article>
+                    <article class="panel">
+                        <h3>Cultura</h3>
+                        <p>Cadastre eventos de skate, batalhas de rima, exposições, grafite, oficinas e campeonatos.</p>
+                        <div class="pill-row"><span class="pill">Grafite</span><span class="pill">Batalha de
+                                rima</span><span class="pill">Dança</span><span class="pill">Fotografia</span></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="cultura">
+            <div class="wrap">
+                <div class="section-head">
+                    <div>
+                        <p class="eyebrow">Agenda cultural</p>
+                        <h2>Rolês para cadastrar</h2>
+                    </div>
+                    <p class="muted">Troque os cards por eventos reais.</p>
+                </div>
+                <div class="cards">
+                    <article class="card">
+                        <h3>Best trick da semana</h3>
+                        <p>Campeonato local, horário e regras.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Encontro de DJs</h3>
+                        <p>Local, estilo musical e inscrição.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Mutirão de grafite</h3>
+                        <p>Projeto cultural com artistas da quebrada.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="band" id="planejamento">
+            <div class("wrap"): < div="section-head">
+                < div>
+                    < p="eyebrow"> Controle </ p>
+                    < h2> Planeje o gasto do rolê </ h2>
+                </ div>
+                < p="muted"> Calcule transporte, lanche e reserva. </ p>
+                </ div>
+                < div="panel">
+                    < div="toolbar">
+                        < input="field" id="transport" type="number" min="0" step="0.01" placeholder="Transporte">
+                            < input="field" id="food" type="number" min="0" step="0.01" placeholder="Lanche">
+                                < input="field" id="extra" type="number" min="0" step="0.01" placeholder="Reserva">
+                                    < button="btn primary" id="savePlan"> Salvar </ button>
+                                </ div>
+                                < div="calc-grid">
+                                    < div="panel metric">
+                                        < span="muted"> Transporte </ span>
+                                        < strong id="mTransport"> R$ 0,00 </ strong>
+                                    </ div>
+                                    < div="
+
+<footer><div class=" wrap footer-grid"><strong>HENATOMNA</strong><span>App em HTML, CSS e JavaScript para skate,
+                                            música, cultura, tempo e bolsa.</span>
+            </div>
+            </footer>
+
+            <script src="script.js"></script>
+</body>
+
+</html>
